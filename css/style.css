@@ -1,0 +1,193 @@
+
+/* header
+{
+      background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)) , url(/img/1.jpg);
+      height: 100vh;
+      background-size: cover;
+      background-position: center;
+} */
+  
+.logo img
+{
+      float: left;
+      width: 130px;
+      height: auto;
+      margin-left: 9px;
+}
+
+#home1 ul
+{   float:right; 
+    list-style-type:none; 
+    margin-top:25px;
+}
+
+#home1 ul li
+{
+    display: inline-block;
+    padding: 5px;
+}
+
+#home1 ul li a
+{   
+    text-decoration:none; 
+    color:#ffffff;  
+    border:2px solid #ffffff;
+    transition: 0.6s ease;
+    margin-right: 5px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#home1 ul li a:hover
+{
+    background-color:#fcd2e4; 
+    color:#ffffff 
+}
+
+h1 { 
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 40px;
+    text-shadow: 1px 1px 3px;
+    text-align: center;
+    color: #f5f5f5;
+    background-color: #F283B3;
+    padding-top: 30px;
+    padding-left: 5px;
+    padding-bottom: 30px;
+  }
+
+#home{
+    font-family: Courier;
+    color: rgb(255,255,255);
+    background-color: #A65A7B;
+    padding: 10px
+    
+  }
+
+h2{
+    font-family: Courier;
+    color: rgb(255,255,255);
+    padding: 10px
+}  
+nav{
+    text-align: center;
+}
+nav ul {
+    list-style-type: none;
+    margin-bottom: 35px;
+    /* padding: 0; */
+    overflow: hidden;
+}
+
+
+nav ul li {
+    float: left;
+    background-color: none;
+    list-style: none; 
+    display: inline;
+}
+nav ul li a {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    text-decoration: none;
+}
+
+table {
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+  
+th, td {
+    padding: 7px 10px 10px 10px;
+}
+  
+th {
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: 12px;
+    font-weight: bolder;
+    border-bottom: 2px solid black;
+    border-top: 1px solid palevioletred;
+    text-align: left;
+    color: #CC6E97;
+}  
+ 
+tr:hover {
+    background-color: #F5A9D1;
+} 
+
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: "Helvetica", sans-serif;
+    background-color: lightgray;
+  }
+  
+img {
+    width: auto;
+  }
+  
+.slider-container{
+    height: 500px;
+    width: 100%;
+    position: relative;
+    overflow: hidden; 
+    text-align: center;
+  }
+  
+.menu {
+    position: absolute;
+    left: 0;
+    z-index: 900;
+    width: 100%;
+    bottom: 0;
+  }
+  
+.menu label {
+    cursor: pointer;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background: #fff;
+    border-radius: 50px;
+    margin: 0 ;
+  }
+  
+.slide {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    z-index: 10;
+    padding: 8em 1em 0;
+    background-size: cover;
+    background-position: 50% 50%;
+    transition: left 0s .75s;
+  }
+  
+[id^="slide"]:checked + .slide {
+    left: 0;
+    z-index: 100;
+    transition: left .65s ease-out;
+  }
+  
+.slide-1 {
+    background-image: url("/img/chinook.jpg");
+  }
+.slide-2 {
+    background-image: url("/img/cutter.jpeg");
+  }
+.slide-3 {
+    background-image: url("/img/family.jpg");
+  }
+.slide-4 {
+    background-image: url("/img/frosted-cookie.jpg");
+  }
+.slide-5 {
+    background-image: url("/img/shirt.jpg");
+  }  

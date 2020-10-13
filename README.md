@@ -1,4 +1,4 @@
-# Lab: 07
+# Lab: 08 b 
 
 ## Add a constructor function to the cookie stand project
 
