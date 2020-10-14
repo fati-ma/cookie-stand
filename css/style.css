@@ -233,6 +233,22 @@ img {
     background-image: url("/img/shirt.jpg");
   }  
 
+.inputs {
+    border: 1px solid pink;
+    background-color: rgb(215,199,195); 
+
+  } 
+  
+input.submit:hover {
+    background-color: #665544;
+  }
+  
+input.submit:active {
+    background-color: chocolate;
+  }
+  
+
+
   /*
   *{
   margin: 0; padding:0; box-sizing: border-box;
