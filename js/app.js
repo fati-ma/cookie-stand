@@ -94,85 +94,6 @@ CookieShop.prototype.render = function () {
 }
 
 
-
-function renderShops() {
-    for (var i = 0; i < locationsArr.length; i++) {
-        locationsArr[i].render();
-    }
-}
-
-
-function total() {
-
-    var trE2 = document.createElement('tr');
-    var tdE5 = document.createElement('td')
-    trE2.appendChild(tdE5);
-    tdE5.textContent = 'Totals';
-    
-    for (var j = 0; j < hour.length; j++) {
-        var cookieInHour = 0;
-        for (var i = 0; i < locationsArr.length; i++) {
-            var tdE6 = document.createElement('td');
-            cookieInHour += locationsArr[i].cookiesPerHourArr[j];
-        }
-        tdE6.textContent = cookieInHour;
-        trE2.appendChild(tdE6);
-    }
-    var hourTotal = 0;
-    for (var i = 0; i < locationsArr.length; i++) {
-        hourTotal += locationsArr[i].totalCookies;
-    }
-    
-    var tdE7 = document.createElement('td');
-    tdE7.textContent = hourTotal;
-    trE2.appendChild(tdE7);
-    table.appendChild(trE2);
-    
-}
-
-var myForm = document.getElementById('shopsForm');
-
-myForm.addEventListener('submit', function (event) {
-    
-    event.preventDefault();
-    
-    var locName = event.target.locName.value;
-    var minCust = parseInt(event.target.minCust.value);
-    var maxCust = parseInt(event.target.maxCust.value);
-    var avgCookies = parseFloat(event.target.avgCookies.value);
-    
-    var newStore = new CookieShop(locName, minCust, maxCust, avgCookies);
-    
-    locationsArr.push(newStore);
-
-    newStore.calcCustPerHour();
-    newStore.calcCookiesPerHour();
-
-    newStore.render();
-    
-    
-    
-    // var trE3 = document.createElement('tr');
-    // table.removeChild(trE2);
-
-    // table.appendChild(trE3);
-    // var tdE4 = document.createElement('td');
-    // tdE4.textContent = newStore.locationName;
-    // trE3.appendChild(tdE4)
-    
-    // for (var j = 0; j < hour.length; j++) {
-    //     var tdEl4 = document.createElement('td');
-    //     tdEl4.textContent = newStore.cookiesPerHourArr[j];
-    //     trE3.appendChild(tdEl4)
-    // }
-    
-    // var tdEl5 = document.createElement('td');
-    // tdEl5.textContent = newStore.totalCookies;
-    // trE3.appendChild(tdEl5);
-    
-     total(); 
-}) 
-
 var seattle = new CookieShop('Seattle', 23, 65, 6.3);
 seattle.calcCustPerHour();
 seattle.calcCookiesPerHour();
@@ -194,10 +115,73 @@ lima.calcCustPerHour();
 lima.calcCookiesPerHour();
 console.log(lima);
 
+var myForm = document.getElementById('shopsForm');
+myForm.addEventListener('submit', function (event) {
+    
+    event.preventDefault();
+    
+    var locName = event.target.locName.value;
+    var minCust = parseInt(event.target.minCust.value);
+    var maxCust = parseInt(event.target.maxCust.value);
+    var avgCookies = parseFloat(event.target.avgCookies.value);
+    
+    var newStore = new CookieShop(locName, minCust, maxCust, avgCookies);
+    
+    newStore.calcCustPerHour();
+    newStore.calcCookiesPerHour();
+    
+    console.log(locationsArr);
+    console.log(newStore);
+    newStore.render();
+    total(); 
+
+    
+    
+})
+
 tableTitle();
 createHeader();
 renderShops();
-// total();
+total();
+
+function total() {
+    
+    var trE2 = document.createElement('tr');
+    var tdE5 = document.createElement('td')
+    trE2.appendChild(tdE5);
+    tdE5.textContent = 'Totals';
+    
+    for (var j = 0; j < hour.length; j++) {
+        var cookieInHour = 0;
+        for (var i = 0; i < locationsArr.length; i++) {
+            var tdE6 = document.createElement('td');
+            cookieInHour += locationsArr[i].cookiesPerHourArr[j];
+        }
+        tdE6.textContent = cookieInHour;
+        trE2.appendChild(tdE6);
+    }
+    var hourTotal=0;
+    for (var i = 0; i < locationsArr.length; i++) {
+        hourTotal += locationsArr[i].totalCookies;
+    }
+    
+    
+    var tdE7 = document.createElement('td');
+    tdE7.textContent = hourTotal;
+    trE2.appendChild(tdE7);
+    table.appendChild(trE2);
+}
+
+function renderShops() {
+    for (var i = 0; i < locationsArr.length; i++) {
+        locationsArr[i].render();
+        
+    } 
+}
+
+
+
+
 
 
 /* 
@@ -244,7 +228,7 @@ function display_c() {
 
 function display_ct() {
     var x = new Date()
-    //document.getElementById('ct').innerHTML = x;
+    // document.getElementById('ct').innerHTML = x;
     document.getElementById('t1').value = x;
     display_c();
 }
