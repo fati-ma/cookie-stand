@@ -1,5 +1,6 @@
 'use strict';
 
+var table = document.createElement('table');
 var hour = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm'];
 var locationsArr = [];
 
@@ -43,7 +44,6 @@ function tableTitle() {
     title.textContent = "Salmon Cookies Sales Page";
 }
 
-var table = document.createElement('table');
 
 
 function createHeader() {
@@ -93,6 +93,34 @@ CookieShop.prototype.render = function () {
 
 }
 
+function total() {
+
+    var trE2 = document.createElement('tr');
+    var tdE5 = document.createElement('td')
+    trE2.appendChild(tdE5);
+    tdE5.textContent = 'Totals';
+
+    for (var j = 0; j < hour.length; j++) {
+        var cookieInHour = 0;
+        for (var i = 0; i < locationsArr.length; i++) {
+            var tdE6 = document.createElement('td');
+            cookieInHour += locationsArr[i].cookiesPerHourArr[j];
+        }
+        tdE6.textContent = cookieInHour;
+        trE2.appendChild(tdE6);
+    }
+    var hourTotal = 0;
+    for (var i = 0; i < locationsArr.length; i++) {
+        hourTotal += locationsArr[i].totalCookies;
+    }
+
+
+    var tdE7 = document.createElement('td');
+    tdE7.textContent = hourTotal;
+    trE2.appendChild(tdE7);
+
+    table.appendChild(trE2);
+}
 
 var seattle = new CookieShop('Seattle', 23, 65, 6.3);
 seattle.calcCustPerHour();
@@ -115,69 +143,51 @@ lima.calcCustPerHour();
 lima.calcCookiesPerHour();
 console.log(lima);
 
+
+
+tableTitle();
+
+function renderShops() {
+    createHeader();
+    for (var i = 0; i < locationsArr.length; i++) {
+        locationsArr[i].render();
+    }
+    total();
+} renderShops();
+
+
+
 var myForm = document.getElementById('shopsForm');
 myForm.addEventListener('submit', function (event) {
-    
+
     event.preventDefault();
-    
+
     var locName = event.target.locName.value;
     var minCust = parseInt(event.target.minCust.value);
     var maxCust = parseInt(event.target.maxCust.value);
     var avgCookies = parseFloat(event.target.avgCookies.value);
-    
+
     var newStore = new CookieShop(locName, minCust, maxCust, avgCookies);
-    
+
     newStore.calcCustPerHour();
     newStore.calcCookiesPerHour();
-    
+
     console.log(locationsArr);
     console.log(newStore);
-    newStore.render();
-    total(); 
-
-    
-    
+    table.innerHTML = '';
+    renderShops();
+    // newStore.render();
+    // myForm.reset();
 })
 
-tableTitle();
-createHeader();
-renderShops();
-total();
 
-function total() {
-    
-    var trE2 = document.createElement('tr');
-    var tdE5 = document.createElement('td')
-    trE2.appendChild(tdE5);
-    tdE5.textContent = 'Totals';
-    
-    for (var j = 0; j < hour.length; j++) {
-        var cookieInHour = 0;
-        for (var i = 0; i < locationsArr.length; i++) {
-            var tdE6 = document.createElement('td');
-            cookieInHour += locationsArr[i].cookiesPerHourArr[j];
-        }
-        tdE6.textContent = cookieInHour;
-        trE2.appendChild(tdE6);
-    }
-    var hourTotal=0;
-    for (var i = 0; i < locationsArr.length; i++) {
-        hourTotal += locationsArr[i].totalCookies;
-    }
-    
-    
-    var tdE7 = document.createElement('td');
-    tdE7.textContent = hourTotal;
-    trE2.appendChild(tdE7);
-    table.appendChild(trE2);
-}
 
-function renderShops() {
-    for (var i = 0; i < locationsArr.length; i++) {
-        locationsArr[i].render();
-        
-    } 
-}
+
+
+
+
+
+// table.appendChild(trE2);
 
 
 
