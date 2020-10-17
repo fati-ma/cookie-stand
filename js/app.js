@@ -60,7 +60,7 @@ function tableTitle() {
     var container = document.getElementById("cookiesTable");
     var title = document.createElement("h1");
     container.appendChild(title);
-    title.textContent = "Salmon Cookies Sales Page";
+    title.textContent = "Salmon Cookies Sales Statistics";
 }
 
 var table = document.createElement('table');

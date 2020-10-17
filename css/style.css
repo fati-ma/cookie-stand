@@ -1,6 +1,6 @@
-
 #home1 nav{
   background-color: #f5f5f5;
+  z-index: 2;
 }
 
 main{
@@ -25,7 +25,6 @@ nav {
 
 #home1 ul
 {   
-    /* float:right;  */
     list-style-type:none; 
     margin-top:25px;
 }
@@ -53,7 +52,6 @@ nav {
 }
 section #welcome{
   margin-top: 30%;
-  /* float: left; */
 }
 #welcome h1 { 
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
@@ -65,7 +63,6 @@ section #welcome{
   padding-top: 30px;
   padding-left: 5px;
   padding-bottom: 30px;
-  /* margin-top: 20%; */
 }
 
 #welcome p, button{
@@ -130,7 +127,6 @@ nav{
 nav ul {
     list-style-type: none;
     margin-bottom: 35px;
-    /* padding: 0; */
     overflow: hidden;
 }
 
@@ -187,6 +183,7 @@ html, body {
     padding: 0;
     font-family: "Helvetica", sans-serif;
     background-color: lightgray;
+    z-index: 1;
   }
   
 img {
@@ -203,39 +200,16 @@ img {
 
 .center p, h4{
   margin-left: 90px;
-  padding: 10px;
+  padding: 0px;
   text-align: left;
 }
 
 .center a, .center ul{
   margin-left: 90px;
-  padding: 10px;
+  padding: 0px;
   text-align: left;
 }
 
-/* 
-#navbar ul { 
-	margin: 0; 
-	padding: 5px; 
-	list-style-type: none; 
-	text-align: center; 
- 
-	} 
- 
-#navbar ul li {  
-	display: inline; 
-	} 
- 
-#navbar ul li a { 
-	text-decoration: none; 
-	padding: 15px; 
-	color: #fff;  
-	} 
- 
-#navbar ul li a:hover { 
-	color: #000; 
-	background-color: #fff; 
-	}  */
   
 .slider-container{
     height: 500px;
@@ -244,7 +218,7 @@ img {
     overflow: hidden; 
     text-align: center;
     margin-bottom: 20px;
-    /* object-fit: contain; */
+    z-index: 1;
 
   }
   
@@ -278,8 +252,6 @@ img {
     background-position: 50% 50%;
     transition: left 0s .75s;
     margin-left: 23%;
-    /* object-fit: contain; */
-
   }
   
 [id^="slide"]:checked + .slide {
@@ -331,28 +303,6 @@ img {
   font-size:30px;
 }
 
-/* #t1:before{
-  content:"";
-  position: absolute;
-  width : calc(100% + 10px);
-  height : calc(100% + 10px);
-  background-image: conic-gradient(red, purple, blue, yellow, orange, red);
-  z-index : -1;
-  border-radius:3px;
-  filter:blur(5px);
-} */
-
-
-
-
-  
-/* input.submit:hover {
-    background-color: #665544;
-  }
-  
-input.submit:active {
-    background-color: chocolate;
-  } */
   
 button{
     display:inline-block;
@@ -379,11 +329,6 @@ button:hover{
     background-position: -100% 100%;
   }
 
-  /* @import url(https://fonts.googleapis.com/css?family=Roboto:400,500,300,700); */
-
-  /* * {
-    font-family: Roboto;
-  } */
   
   .footer-distributed{
     background: #444;
@@ -397,26 +342,10 @@ button:hover{
     height: 270px;
     }
   
-  /* section {
-    width: 100%;
-    display: inline-block;
-    background: #ccc;
-    height: 60vh;
-    text-align: center;
-    font-size: 22px;
-    font-weight: 700;
-    text-decoration: underline;
-  }
-   */
-  
-  /* Footer left */
-  
   .footer-distributed .footer-left{
     float: left;
   }
-  
-  /* The company logo */
-  
+
   .footer-distributed h3{
     color:  #ffffff;
     font: normal 36px 'Roboto', cursive;
@@ -426,8 +355,6 @@ button:hover{
   .footer-distributed h3 span{
     color:  palevioletred;
   }
-  
-  /* Footer links */
   
   .footer-distributed .footer-links{
     color:  #ffffff;
@@ -449,8 +376,6 @@ button:hover{
     margin: 0;
   }
   
-  /* Footer social icons */
-  
   .footer-distributed .footer-icons{
     margin-top: 40px;
   }
@@ -471,9 +396,6 @@ button:hover{
     margin-right: 3px;
     margin-bottom: 5px;
   }
-  
-  /* Footer Right */
-  
   .footer-distributed .footer-right{
     float: right;
   }
@@ -484,9 +406,6 @@ button:hover{
     margin: 15px 38px 0 0;
     color: #ffffff;
   }
-  
-  /* The contact form */
-  
   .footer-distributed form{
     display: inline-block;
   }
@@ -542,10 +461,7 @@ button:hover{
     padding: 5px 50px;
     font-weight: bold;
     float: right;
-  }
-  
-  /* If you don't want the footer to be responsive, remove these media queries */
-  
+  }  
   @media (max-width: 1000px) {
   
     .footer-distributed {
