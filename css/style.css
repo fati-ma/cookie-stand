@@ -1,21 +1,31 @@
-/* header
-{
-      background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)) , url(/img/1.jpg);
-      height: 100vh;
-      background-size: cover;
-      background-position: center;
-} */
-  
+
+#home1 nav{
+  background-color: #f5f5f5;
+}
+
+main{
+  margin-top: 6%;
+}
+
 .logo img
 {
       float: left;
       width: 130px;
       height: auto;
-      margin-left: 9px;
+      margin-top: 15px;
+      margin-left: 15px;
+      margin-right: 40%;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
 }
 
 #home1 ul
-{   float:right; 
+{   
+    /* float:right;  */
     list-style-type:none; 
     margin-top:25px;
 }
@@ -41,6 +51,32 @@
     background-color:#fcd2e4; 
     color:#ffffff 
 }
+section #welcome{
+  margin-top: 30%;
+  /* float: left; */
+}
+#welcome h1 { 
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 40px;
+  text-shadow: 1px 1px 3px;
+  text-align: center;
+  color: #f5f5f5;
+  background-color: #F283B3;
+  padding-top: 30px;
+  padding-left: 5px;
+  padding-bottom: 30px;
+  /* margin-top: 20%; */
+}
+
+#welcome p, button{
+  margin-left: 15px;
+  text-align: center;
+}
+
+#welcome button{
+  margin-left: 42.5%;
+  margin-bottom: 25px;
+}
 
 h1 { 
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
@@ -58,7 +94,7 @@ h1 {
     font-family: Courier;
     color: rgb(255,255,255);
     background-color: #A65A7B;
-    padding: 10px
+    padding: 10px;
     
   }
 
@@ -66,7 +102,28 @@ h2{
     font-family: Courier;
     color: rgb(255,255,255);
     padding: 10px
-}  
+} 
+
+#hoursSection p{
+  padding: 15px;
+  text-align: left;
+}
+
+#hoursSection h2{
+  color: palevioletred;
+  background-color: #f5f5f5;
+  width: fit-content;
+  margin-left: 15px;
+
+}
+
+p{
+  color: black;
+  font-size: 20px;
+  text-align: center;
+}
+  
+
 nav{
     text-align: center;
 }
@@ -92,29 +149,35 @@ nav ul li a {
     text-decoration: none;
 }
 
-table {
+table{
     width: 1000px;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 50px;
+    background-color: #f5f5f5;
+    border: 1px solid palevioletred;
+    margin-bottom: 90px;
 }
   
 th, td {
-    padding: 7px 10px 10px 10px;
+    padding: 7px 10px 6px 10px;
+    border: 1px solid palevioletred;
+
 }
   
 th {
     text-transform: uppercase;
     letter-spacing: 0.1em;
-    font-size: 12px;
+    font-size: 15px;
     font-weight: bolder;
     border-bottom: 2px solid black;
     border-top: 1px solid palevioletred;
     text-align: left;
-    color: #CC6E97;
+    color: palevioletred;
 }  
  
 tr:hover {
-    background-color: #F5A9D1;
+    background-color: #f3cce1;
 } 
 
 html, body {
@@ -138,17 +201,19 @@ img {
 
 }  
 
-.center {
-  margin: auto;
-  width: 50%;
+.center p, h4{
+  margin-left: 90px;
   padding: 10px;
+  text-align: left;
 }
 
-#hours{
-  max-width: 500px;
-  margin: auto;
+.center a, .center ul{
+  margin-left: 90px;
+  padding: 10px;
+  text-align: left;
 }
 
+/* 
 #navbar ul { 
 	margin: 0; 
 	padding: 5px; 
@@ -170,7 +235,7 @@ img {
 #navbar ul li a:hover { 
 	color: #000; 
 	background-color: #fff; 
-	} 
+	}  */
   
 .slider-container{
     height: 500px;
@@ -178,11 +243,14 @@ img {
     position: relative;
     overflow: hidden; 
     text-align: center;
+    margin-bottom: 20px;
+    /* object-fit: contain; */
+
   }
   
 .menu {
     position: absolute;
-    left: 0;
+    left: 40px;
     z-index: 900;
     width: 100%;
     bottom: 0;
@@ -199,7 +267,7 @@ img {
   }
   
 .slide {
-    width: 100%;
+    width: 50%;
     height: 100%;
     position: absolute;
     top: 0;
@@ -209,6 +277,9 @@ img {
     background-size: cover;
     background-position: 50% 50%;
     transition: left 0s .75s;
+    margin-left: 23%;
+    /* object-fit: contain; */
+
   }
   
 [id^="slide"]:checked + .slide {
@@ -233,87 +304,295 @@ img {
     background-image: url("/img/shirt.jpg");
   }  
 
-  /*
-  *{
-  margin: 0; padding:0; box-sizing: border-box;
-  font-family: 'Montserrat', sans-serif;
+.inputs {
+    border: 1px solid palevioletred;
+    background-color: lightgray; 
+    padding: 15px;
+
 }
 
-.site-header {
+#hours{
+  background-color: #222;
+  text-align: center;
+}
+
+
+#t1{
   width: 100%;
-  height: 100vh;
-  background: #0f8a9d;
-  background: linear-gradient(57deg, #00C6A7 , #1E4D92 ); 
-  clip-path: polygon(0% 0%, 100% 0%, 100% 80%, 0% 100%);
-
+  background-color: #fff;
+  height : 40px;
+  padding:3px;
+  text-align: center;
+  place-items:center;
+  background-color:#222;
+  color:#fff;
+  text-transform:uppercase;
+  font-family:calibri;
+  font-size:30px;
 }
 
+/* #t1:before{
+  content:"";
+  position: absolute;
+  width : calc(100% + 10px);
+  height : calc(100% + 10px);
+  background-image: conic-gradient(red, purple, blue, yellow, orange, red);
+  z-index : -1;
+  border-radius:3px;
+  filter:blur(5px);
+} */
 
-nav{
-  width: 100%; height: 100px;
-  display: flex; color: white;
+
+
+
   
-}
+/* input.submit:hover {
+    background-color: #665544;
+  }
+  
+input.submit:active {
+    background-color: chocolate;
+  } */
+  
+button{
+    display:inline-block;
+    
+    font:normal normal 300 1.3em 'Open Sans';
+    text-decoration:none;	
+    
+    color:palevioletred;
+    background-color:transparent;
+    border:1px solid palevioletred;
+    border-radius:100px;
+    
+    padding: .3em 1.2em;
+    margin:5px;
+        
+    background-size: 200% 100%;	
+    background-image: linear-gradient(to right, transparent 50%,palevioletred 50%);
+    transition: background-position .3s cubic-bezier(0.19, 1, 0.22, 1) .1s, color .5s ease 0s, background-color .5s ease;
+  }
+  
+button:hover{
+    color:rgba(255, 255, 255, 1);
+    background-color:palevioletred;
+    background-position: -100% 100%;
+  }
 
-.logo{
-  width: 50%;
-  height: 100px;
-}
+  /* @import url(https://fonts.googleapis.com/css?family=Roboto:400,500,300,700); */
 
-.logo h1{
-  line-height: 100px;
-  padding-left: 50px;
-}
-
-.menu{
-  width: 50%; height: 100px;
-}
-
-.menu ul{
-  width: 100%;
-  height: 100px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items:  center;
-}
-
-.menu ul li{
-  list-style: none;
-  font-size: 12px;
-  font-weight: bold;
-  text-transform: uppercase;
-}
-
-section{ display: flex;  }
-
-.leftside { width: 45%; height: auto; overflow: hidden; margin-top: 20px;}
-
-.leftside img{  width: 600px;  height: 500px; }
-
-.rightside{ width: 55%; height: 300px; color: white; text-align: center; margin-top: 80px; padding: 40px;}
-
-.rightside h1{ text-align: center;
-  color: #ffffff;
-  font-size: 50px;
-  font-weight: 900;
-  text-transform: uppercase; } 
-
-.rightside p {  
-  font-size: 1.1rem; padding: 30px 0; }
-
-.rightside button{   font-size: 17px;
-  font-weight: 600;
-  color: white;
-  text-transform: uppercase;
-  background: linear-gradient(57deg, #00C6A7 , #1E4D92 ); 
-  border-radius: 4px 4px 4px 4px;
-  padding: 20px 35px ; 
-}
-
-
-
-.rightside button:hover{
-    background: linear-gradient(57deg, #1E4D92, #00C6A7 );   
-}
-*/
+  /* * {
+    font-family: Roboto;
+  } */
+  
+  .footer-distributed{
+    background: #444;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+    box-sizing: border-box;
+    width: 100%;
+    font: bold 16px sans-serif;
+    text-align: left;
+    padding: 30px 60px 10px;
+    overflow: hidden;
+    height: 270px;
+    }
+  
+  /* section {
+    width: 100%;
+    display: inline-block;
+    background: #ccc;
+    height: 60vh;
+    text-align: center;
+    font-size: 22px;
+    font-weight: 700;
+    text-decoration: underline;
+  }
+   */
+  
+  /* Footer left */
+  
+  .footer-distributed .footer-left{
+    float: left;
+  }
+  
+  /* The company logo */
+  
+  .footer-distributed h3{
+    color:  #ffffff;
+    font: normal 36px 'Roboto', cursive;
+    margin: 0 0 10px;
+  }
+  
+  .footer-distributed h3 span{
+    color:  palevioletred;
+  }
+  
+  /* Footer links */
+  
+  .footer-distributed .footer-links{
+    color:  #ffffff;
+    margin: 0 0 10px;
+    padding: 0;
+  }
+  
+  .footer-distributed .footer-links a{
+    display:inline-block;
+    line-height: 1.8;
+    text-decoration: none;
+    color:  inherit;
+  }
+  
+  .footer-distributed .footer-company-name{
+    color:  #8f9296;
+    font-size: 14px;
+    font-weight: normal;
+    margin: 0;
+  }
+  
+  /* Footer social icons */
+  
+  .footer-distributed .footer-icons{
+    margin-top: 40px;
+  }
+  
+  .footer-distributed .footer-icons a{
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    background-color:  #33383b;
+    border-radius: 2px;
+  
+    font-size: 20px;
+    color: #ffffff;
+    text-align: center;
+    line-height: 35px;
+  
+    margin-right: 3px;
+    margin-bottom: 5px;
+  }
+  
+  /* Footer Right */
+  
+  .footer-distributed .footer-right{
+    float: right;
+  }
+  
+  .footer-distributed .footer-right p{
+    display: inline-block;
+    vertical-align: top;
+    margin: 15px 38px 0 0;
+    color: #ffffff;
+  }
+  
+  /* The contact form */
+  
+  .footer-distributed form{
+    display: inline-block;
+  }
+  
+  .footer-distributed form input,
+  .footer-distributed form textarea{
+    display: block;
+    border-radius: 3px;
+    box-sizing: border-box;
+    background-color:  #1f2022;
+    box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.1);
+    border: none;
+    resize: none;
+  
+    font: inherit;
+    font-size: 14px;
+    font-weight: normal;
+    color:  #d1d2d2;
+  
+    width: 400px;
+    padding: 18px;
+  }
+  
+  .footer-distributed ::-webkit-input-placeholder {
+    color:  #5c666b;
+  }
+  
+  .footer-distributed ::-moz-placeholder {
+    color:  #5c666b;
+    opacity: 1;
+  }
+  
+  .footer-distributed :-ms-input-placeholder{
+    color:  #5c666b;
+  }
+  
+  
+  .footer-distributed form input{
+    height: 55px;
+    margin-bottom: 15px;
+  }
+  
+  .footer-distributed form textarea{
+    height: 100px;
+    margin-bottom: 20px;
+  }
+  
+  .footer-distributed form button{
+    border-radius: 3px;
+    background-color:  #33383b;
+    color: #ffffff;
+    border: 0;
+    padding: 5px 50px;
+    font-weight: bold;
+    float: right;
+  }
+  
+  /* If you don't want the footer to be responsive, remove these media queries */
+  
+  @media (max-width: 1000px) {
+  
+    .footer-distributed {
+      font: bold 14px sans-serif;
+    }
+  
+    .footer-distributed .footer-company-name{
+      font-size: 12px;
+    }
+  
+    .footer-distributed form input,
+    .footer-distributed form textarea{
+      width: 250px;
+    }
+  
+    .footer-distributed form button{
+      padding: 10px 35px;
+    }
+  
+  }
+  
+  @media (max-width: 800px) {
+  
+    .footer-distributed{
+      padding: 30px;
+    }
+  
+    .footer-distributed .footer-left,
+    .footer-distributed .footer-right{
+      float: none;
+      max-width: 300px;
+      margin: 0 auto;
+    }
+  
+    .footer-distributed .footer-left{
+      margin-bottom: 40px;
+    }
+  
+    .footer-distributed form{
+      margin-top: 30px;
+    }
+  
+    .footer-distributed form{
+      display: block;
+    }
+  
+    .footer-distributed form button{
+      float: none;
+    }
+  }
