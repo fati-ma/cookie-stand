@@ -15,7 +15,6 @@ function CookieShop(locationName, minCust, maxCust, avrCookie) {
     this.totalCookies = 0;
 
     locationsArr.push(this);
-
 }
 
 CookieShop.prototype.calcCustPerHour = function () {
@@ -34,16 +33,6 @@ CookieShop.prototype.calcCookiesPerHour = function () {
     }
     console.log(this.totalCookies);
 }
-
-
-
-// function tableTitle() {
-//     var container = document.getElementById("cookiesTable");
-//     var title = document.createElement("h1");
-//     container.appendChild(title);
-//     title.textContent = "Salmon Cookies Sales Page";
-// }
-
 
 
 function createHeader() {
@@ -144,9 +133,6 @@ lima.calcCookiesPerHour();
 console.log(lima);
 
 
-
-// tableTitle();
-
 function renderShops() {
     createHeader();
     for (var i = 0; i < locationsArr.length; i++) {
@@ -176,61 +162,12 @@ myForm.addEventListener('submit', function (event) {
     console.log(newStore);
     table.innerHTML = '';
     renderShops();
-    // newStore.render();
-    // myForm.reset();
 })
 
 
 
 
-
-
-
-
-// table.appendChild(trE2);
-
-
-
-
-
-
-/* 
-var myForm = document.getElementById('shopsForm');
- 
- 
-form.addEventListener('submit', function (event) {
-    event.preventDefault();
-    
-    var locName = event.target.locName.value;
-    var minCust = event.target.minCust.value;
-    var maxCust = event.target.maxCust.value;
-    var avgCookies = event.target.avgCookies.value;
-    
-    var newStore = new CookieShop(locName, minCust, maxCust, avgCookies);
-    locationsArr.push(newStore);
-
-newStore.calcCustPerHour();
-newStore.calcCookiesPerHour();
-
-var trE3 = document.createElement('tr');
-table.appendChild(trE3);
-
-let thE4 = document.createElement('th');
-thE4.innerText = newStore.locationName;
-trE3.appendChild(thE4)
-
-for (var j = 0; j < 14; j++) {
-    var tdEl4 = document.createElement('td');
-    tdEl4.innerText = newStore.cookiesPerHourArr[j];
-    trE3.appendChild(tdEl4)
-}
-
-var tdEl5 = document.createElement('td');
-tdEl5.innerText = newStore.totalCookies;
-trE3.appendChild(tdEl5);
-
-*/
-
+// LIVE OCLOCK
 function display_c() {
     var refresh = 1000; // Refresh rate in milli seconds
     mytime = setTimeout('display_ct()', refresh)
@@ -245,59 +182,7 @@ function display_ct() {
 onload = display_ct();
 
 
-
-
-
-// var tableHeaders = ['Location', '6am','7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm', 'Daily Location Total'];
-// var tableRows = ['Seattle', 'Tokyo', 'Dubai', 'Paris', 'Lima', 'Totals'];  
-
-
-//     // for (var i=0; i<tableRows.length; i++){
-//     //   var row = document.createElement("tr");
-//     //   table.appendChild(row);
-//     //   row.textContent = locationsArr[i];
-//     // }
-
-//     var row = document.createElement('tr');
-//     table.appendChild(row);
-
-//     var header = document.createElement('th');
-//     row.appendChild(header);
-
-//     // var cell = document.createElement('td');
-//     // row.appendChild(cell);
-//     // cell.textContent = "A";
-
-//     // var goodStuff = ['good with cats','good with dogs','good with kids'];
-//     for(var i=0; i<5;i++){
-//     var listOfLoc = document.createElement('td');
-//     listOfLoc.textContent = this.locationName;
-//     row.appendChild(listOfLoc);
-
-//     }
-//     for(var i=0; i<tableHeaders.length; i++) {
-//         var thE = document.createElement('th');
-//         row.appendChild(thE);
-//         thE.textContent = tableHeaders[i];
-//     }
-
-//     // var row2 = document.createElement('tr');
-//     // for(var i=0; i<tableRows.length; i++) {
-//     //     var tdE = document.createElement('td');
-//     //     // trE.setAttribute("scope", "row");
-//     //     row2.appendChild(listOfLoc);
-//     //     listOfLoc.textContent = tableRows[i];
-//     //   }
-
-// //     for (var j=0; j<tableRows; j++) {
-// //       for (var i=0; i<tableHeaders.length; i++){ 
-// //           var  row2 = document.createElement('tr');
-// //           var tdE = document.createElement('td');
-// //           row2.appendChild(tdE);
-// //           tdE.textContent = this.locationName;
-// //     }
-// // }
-
+// SLIDER CODE
 //current position
 var pos = 0;
 //number of slides
@@ -307,11 +192,6 @@ var sliderWidth = $('#slider-wrap').width();
 
 
 $(document).ready(function () {
-
-
-    /*****************
-     BUILD THE SLIDER
-    *****************/
     //set width to be 'x' times the number of slides
     $('#slider-wrap ul#slider').width(sliderWidth * totalSlides);
 
@@ -325,11 +205,6 @@ $(document).ready(function () {
         slideLeft();
     });
 
-
-
-    /*************************
-     //*> OPTIONAL SETTINGS
-    ************************/
     //automatic slider
     var autoSlider = setInterval(slideRight, 3000);
 
@@ -359,13 +234,8 @@ $(document).ready(function () {
 
 
 
-});//DOCUMENT READY
+});
 
-
-
-/***********
- SLIDE LEFT
-************/
 function slideLeft() {
     pos--;
     if (pos == -1) { pos = totalSlides - 1; }
@@ -377,9 +247,6 @@ function slideLeft() {
 }
 
 
-/************
- SLIDE RIGHT
-*************/
 function slideRight() {
     pos++;
     if (pos == totalSlides) { pos = 0; }
@@ -391,11 +258,6 @@ function slideRight() {
 }
 
 
-
-
-/************************
- //*> OPTIONAL SETTINGS
-************************/
 function countSlides() {
     $('#counter').html(pos + 1 + ' / ' + totalSlides);
 }

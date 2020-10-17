@@ -1,13 +1,5 @@
-/* header
-{
-      background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)) , url(/img/1.jpg);
-      height: 100vh;
-      background-size: cover;
-      background-position: center;
-} */
-
 #home1 nav{
-  background-color: #f5f5f5;
+  background-color: rgba(253, 253, 253, 0.78);
   z-index: 2;
 }
 
@@ -33,7 +25,6 @@ nav {
 
 #home1 ul
 {   
-    /* float:right;  */
     list-style-type:none; 
     margin-top:25px;
 }
@@ -56,12 +47,12 @@ nav {
 
 #home1 ul li a:hover
 {
-    background-color:#fcd2e4; 
-    color:#ffffff 
+    background-color:palevioletred; 
+    color:black 
 }
 section #welcome{
-  margin-top: 30%;
-  /* float: left; */
+  margin-top: 32%;
+
 }
 #welcome h1 { 
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
@@ -73,7 +64,6 @@ section #welcome{
   padding-top: 30px;
   padding-left: 5px;
   padding-bottom: 30px;
-  /* margin-top: 20%; */
 }
 
 #welcome p, button{
@@ -212,17 +202,14 @@ img {
 
 .center p, h4{
   margin-left: 90px;
-  padding: 10px;
   text-align: left;
 }
 
 .center a, .center ul{
   margin-left: 90px;
-  padding: 10px;
   text-align: left;
 }
 
-  
 .slider-container{
     height: 500px;
     width: 100%;
@@ -231,8 +218,6 @@ img {
     text-align: center;
     margin-bottom: 20px;
     z-index: 1;
-    /* object-fit: contain; */
-
   }
   
 .menu {
@@ -265,8 +250,6 @@ img {
     background-position: 50% 50%;
     transition: left 0s .75s;
     margin-left: 23%;
-    /* object-fit: contain; */
-
   }
   
 [id^="slide"]:checked + .slide {
@@ -317,29 +300,6 @@ img {
   font-family:calibri;
   font-size:30px;
 }
-
-/* #t1:before{
-  content:"";
-  position: absolute;
-  width : calc(100% + 10px);
-  height : calc(100% + 10px);
-  background-image: conic-gradient(red, purple, blue, yellow, orange, red);
-  z-index : -1;
-  border-radius:3px;
-  filter:blur(5px);
-} */
-
-
-
-
-  
-/* input.submit:hover {
-    background-color: #665544;
-  }
-  
-input.submit:active {
-    background-color: chocolate;
-  } */
   
 button{
     display:inline-block;
@@ -365,13 +325,6 @@ button:hover{
     background-color:palevioletred;
     background-position: -100% 100%;
   }
-
-  /* @import url(https://fonts.googleapis.com/css?family=Roboto:400,500,300,700); */
-
-  /* * {
-    font-family: Roboto;
-  } */
-  
   .footer-distributed{
     background: #444;
     box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
@@ -384,25 +337,9 @@ button:hover{
     height: 270px;
     }
   
-  /* section {
-    width: 100%;
-    display: inline-block;
-    background: #ccc;
-    height: 60vh;
-    text-align: center;
-    font-size: 22px;
-    font-weight: 700;
-    text-decoration: underline;
-  }
-   */
-  
-  /* Footer left */
-  
   .footer-distributed .footer-left{
     float: left;
   }
-  
-  /* The company logo */
   
   .footer-distributed h3{
     color:  #ffffff;
@@ -413,8 +350,6 @@ button:hover{
   .footer-distributed h3 span{
     color:  palevioletred;
   }
-  
-  /* Footer links */
   
   .footer-distributed .footer-links{
     color:  #ffffff;
@@ -435,9 +370,7 @@ button:hover{
     font-weight: normal;
     margin: 0;
   }
-  
-  /* Footer social icons */
-  
+    
   .footer-distributed .footer-icons{
     margin-top: 40px;
   }
@@ -459,8 +392,6 @@ button:hover{
     margin-bottom: 5px;
   }
   
-  /* Footer Right */
-  
   .footer-distributed .footer-right{
     float: right;
   }
@@ -471,8 +402,6 @@ button:hover{
     margin: 15px 38px 0 0;
     color: #ffffff;
   }
-  
-  /* The contact form */
   
   .footer-distributed form{
     display: inline-block;
@@ -531,8 +460,6 @@ button:hover{
     float: right;
   }
   
-  /* If you don't want the footer to be responsive, remove these media queries */
-  
   @media (max-width: 1000px) {
   
     .footer-distributed {
@@ -585,88 +512,3 @@ button:hover{
   }
 
     
-
-  /*
-  *{
-  margin: 0; padding:0; box-sizing: border-box;
-  font-family: 'Montserrat', sans-serif;
-}
-
-.site-header {
-  width: 100%;
-  height: 100vh;
-  background: #0f8a9d;
-  background: linear-gradient(57deg, #00C6A7 , #1E4D92 ); 
-  clip-path: polygon(0% 0%, 100% 0%, 100% 80%, 0% 100%);
-
-}
-
-
-nav{
-  width: 100%; height: 100px;
-  display: flex; color: white;
-  
-}
-
-.logo{
-  width: 50%;
-  height: 100px;
-}
-
-.logo h1{
-  line-height: 100px;
-  padding-left: 50px;
-}
-
-.menu{
-  width: 50%; height: 100px;
-}
-
-.menu ul{
-  width: 100%;
-  height: 100px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items:  center;
-}
-
-.menu ul li{
-  list-style: none;
-  font-size: 12px;
-  font-weight: bold;
-  text-transform: uppercase;
-}
-
-section{ display: flex;  }
-
-.leftside { width: 45%; height: auto; overflow: hidden; margin-top: 20px;}
-
-.leftside img{  width: 600px;  height: 500px; }
-
-.rightside{ width: 55%; height: 300px; color: white; text-align: center; margin-top: 80px; padding: 40px;}
-
-.rightside h1{ text-align: center;
-  color: #ffffff;
-  font-size: 50px;
-  font-weight: 900;
-  text-transform: uppercase; } 
-
-.rightside p {  
-  font-size: 1.1rem; padding: 30px 0; }
-
-.rightside button{   font-size: 17px;
-  font-weight: 600;
-  color: white;
-  text-transform: uppercase;
-  background: linear-gradient(57deg, #00C6A7 , #1E4D92 ); 
-  border-radius: 4px 4px 4px 4px;
-  padding: 20px 35px ; 
-}
-
-
-
-.rightside button:hover{
-    background: linear-gradient(57deg, #1E4D92, #00C6A7 );   
-}
-*/
