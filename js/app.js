@@ -37,12 +37,12 @@ CookieShop.prototype.calcCookiesPerHour = function () {
 
 
 
-function tableTitle() {
-    var container = document.getElementById("cookiesTable");
-    var title = document.createElement("h1");
-    container.appendChild(title);
-    title.textContent = "Salmon Cookies Sales Page";
-}
+// function tableTitle() {
+//     var container = document.getElementById("cookiesTable");
+//     var title = document.createElement("h1");
+//     container.appendChild(title);
+//     title.textContent = "Salmon Cookies Sales Page";
+// }
 
 
 
@@ -145,7 +145,7 @@ console.log(lima);
 
 
 
-tableTitle();
+// tableTitle();
 
 function renderShops() {
     createHeader();

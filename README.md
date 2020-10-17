@@ -1,10 +1,10 @@
-# Lab: 09
+# Cookie Stand project
 
-## Add a constructor function to the cookie stand project
+## Final version 
 
-### In this lab I first created a new branch for it, it has all the changes from lab 06.
+### In this project I created 4 branches for labs from 6 to 9 and in each branch I applied a different topic topic .
 
-### I replaced all of lab 06's obhect literals with a single constructor function that, when called with the ‘new’ keyword, it creates a new instance for the 5 objects in the lab ['Seattle', 'Tokyo', 'Dubai', 'Paris', 'Lima']
+### Lab: 6 was about instantiating objects usin Object Literal
 
 ### Then I replace the lists of the objects' data for each store and built a single table of data instead.
 
